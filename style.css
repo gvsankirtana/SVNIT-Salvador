@@ -1,0 +1,110 @@
+*{
+	background-color: red;
+	font-family: Calibri;
+	
+}
+#title{
+	background-color: white;
+	text-align: center;
+	font-family: Georgia Pro Black;
+
+}
+#titleinfo{
+	font-size: 15;
+	text-align: center;
+	font-family: Comic Sans MS;
+	color: yellow;
+}
+#time {
+	background-color: linear-gradient(red,green,blue,violet);
+	text-align: right;
+	font-family: Comic Sans;
+	color:white;
+	font-size: 20;
+}
+#form2{
+	align-self: center;
+	align-content: center;
+	text-align: center;
+
+}
+#signup{
+	font-size: 20;
+	color: white;
+	font-family: Arial Black;
+
+}
+
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 20%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 10%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 40px;
+}
+
+.clearfix{
+	text-align: center;
+	align-items: center;
+}
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
