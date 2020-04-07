@@ -8,15 +8,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="jumbotron">
-<div class="container">
-  <h2>Attendance Table</h2>
-  <p>Calculates your Attendance for monday:</p> 
-</div>
-</head>
-<body>   
+    <div class="container">
+     <h2>Attendance Table</h2>
+     <p>Calculates your Attendance for monday:</p> 
+    </div>
+</head> 
+<body>  
   <table class="table table-dark table-striped  table-hover ">
     <thead>
       <tr>
@@ -29,49 +26,188 @@
     <tbody>
       <tr>
         <td>maths</td>
-        <td><button type="button" class="btn btn-success">present</button></td>
-        <td><button type="button" class="btn btn-danger">absent</button></td>
-        <td>percentage:<div class="progress-bar" style="width:70%"></div></td>
+        <td><button onclick="addone()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="subone()" class="btn btn-danger">absent</button></td>
+        <td><h1>percentage:<span id="thisone">0</span></h1></td>
+        <script type="text/javascript">
+         var foo=0;
+          var value=((foo+1)/100)*365;//making it global variable
+          function addone(){
+            var foo=document.getElementById('thisone').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisone').innerHTML=value;
+            value++;
+            }
+          }
+          function subone(){
+            var foo=document.getElementById('thisone').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisone').innerHTML=value;
+            value--;
+            }
+          }
+       </script>
       </tr>
       <tr>
-        <td>english</td>
-        <td><button type="button" class="btn btn-success">present</button></td>
-        <td><button type="button" class="btn btn-danger">absent</button></td>
-        <td>percentage:<div class="progress-bar" style="width:70%"></div></td>
+        <td>maths</td>
+        <td><button onclick="addtwo()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="subtwo()" class="btn btn-danger">absent</button></td>
+        <td><h1>percentage:<span id="thistwo">0</span></h1></td>
+        <script type="text/javascript">
+         var foo=0;
+          var value=((foo+1)/100)*365;//making it global variable
+          function addtwo(){
+            var foo=document.getElementById('thistwo').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thistwo').innerHTML=value;
+            value++;
+            }
+          }
+          function subtwo(){
+            var foo=document.getElementById('thistwo').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thistwo').innerHTML=value;
+            value--;
+            }
+          }
+       </script>
       </tr>
       <tr>
-        <td>subject</td>
-        <td><button type="button" class="btn btn-success">present</button></td>
-        <td><button type="button" class="btn btn-danger">absent</button></td>
-        <td>percentage:<div class="progress-bar" style="width:70%"></div></td>
+        <td>maths</td>
+        <td><button onclick="addthree()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="subthree()" class="btn btn-danger">absent</button></td>
+        <td><h1>percentage:<span id="thisthree">0</span></h1></td>
+        <script type="text/javascript">
+         var foo=0;
+          var value=((foo+1)/100)*365;//making it global variable
+          function addthree(){
+            var foo=document.getElementById('thisthree').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisthree').innerHTML=value;
+            value++;
+            }
+          }
+          function subthree(){
+            var foo=document.getElementById('thisthree').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisthree').innerHTML=value;
+            value--;
+            }
+          }
+       </script>
       </tr>
       <tr>
-        <td>subject</td>
-        <td><button type="button" class="btn btn-success">present</button></td>
-        <td><button type="button" class="btn btn-danger">absent</button></td>
-        <td>percentage:<div class="progress-bar" style="width:70%"></div></td>
+        <td>maths</td>
+        <td><button onclick="addfour()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="subfour()" class="btn btn-danger">absent</button></td>
+        <td><h1>percentage:<span id="thisfour">0</span></h1></td>
+        <script type="text/javascript">
+          var foo=0;
+          var value=((foo+1)/100)*365;//making it global variable
+          function addfour(){
+            var foo=document.getElementById('thisfour').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisfour').innerHTML=value;
+            value++;
+            }
+          }
+          function subfour(){
+            var foo=document.getElementById('thisfour').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisfour').innerHTML=value;
+            value--;
+            }
+          }
+       </script>
       </tr>
       <tr>
-        <td>subject</td>
-        <td><button type="button" class="btn btn-success">present</button></td>
-        <td><button type="button" class="btn btn-danger">absent</button></td>
-        <td>percentage:<div class="progress-bar" style="width:70%"></div></td>
+        <td>maths</td>
+        <td><button onclick="addfive()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="subfive()" class="btn btn-danger">absent</button></td>
+        <td><h1>percentage:<span id="thisfive">0</span></h1></td>
+        <script type="text/javascript">
+          var foo=0;
+          var value=((foo+1)/100)*365;//making it global variable
+          function addfive(){
+            var foo=document.getElementById('thisfive').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisfive').innerHTML=value;
+            value++;
+            }
+          }
+          function subfive(){
+            var foo=document.getElementById('thisfive').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisfive').innerHTML=value;
+            value--;
+            }
+          }
+       </script>
       </tr>
       <tr>
-        <td>subject</td>
-        <td><button type="button" class="btn btn-success">present</button></td>
-        <td><button type="button" class="btn btn-danger">absent</button></td>
-        <td>percentage:<div class="progress-bar" style="width:70%"></div></td>
+        <td>maths</td>
+        <td><button onclick="addsix()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="subsix()" class="btn btn-danger">absent</button></td>
+        <td><h1>percentage:<span id="thissix">0</span></h1></td>
+        <script type="text/javascript">
+         var foo=0;
+          var value=((foo+1)/100)*365;//making it global variable
+          function addsix(){
+            var foo=document.getElementById('thissix').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisix').innerHTML=value;
+            value++;
+            }
+          }
+          function subsix(){
+            var foo=document.getElementById('thisix').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thissix').innerHTML=value;
+            value--;
+            }
+          } 
+       </script>
       </tr>
       <tr>
-        <td>subject</td>
-        <td><button type="button" class="btn btn-success">present</button></td>
-        <td><button type="button" class="btn btn-danger">absent</button></td>
-        <td>percentage:<div class="progress-bar" style="width:70%"></div></td>
+        <td>maths</td>
+        <td><button onclick="addseven()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="subseven()" class="btn btn-danger">absent</button></td>
+        <td><h1>percentage:<span id="thisseven">0</span></h1></td>
+        <script type="text/javascript">
+          var foo=0;
+          var value=((foo+1)/100)*365;//making it global variable
+          function addseven(){
+            var foo=document.getElementById('thisseven').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisseven').innerHTML=value;
+            value++;
+            }
+          }
+          function subseven(){
+            var foo=document.getElementById('thisseven').innerHTML;
+            var i;
+            for(i=0;value>=0;i++){
+            document.getElementById('thisseven').innerHTML=value;
+            value--;
+            }
+          }
+       </script>
       </tr>
     </tbody>
   </table>
-</div>
-
+  </div>
 </body>
 </html>
