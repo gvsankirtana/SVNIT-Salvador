@@ -12,7 +12,7 @@ An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVN
 
 * **Krithikha**   - [krithikha2001](https://github.com/krithikha2001)
 
- **Mathitha**   - [mahitha2001](https://github.com/mahitha2001)
+* **Mathitha**   - [mahitha2001](https://github.com/mahitha2001)
 
 
 ## License
