@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <div class="container">
      <h2>Attendance Table</h2>
-     <p>Calculates your Attendance for monday:</p> 
+     <p>Calculates your Attendance for the batch <b> D of 1st year </b> for monday:</p> 
     </div>
 </head> 
 <body>  
@@ -26,123 +26,44 @@
     <tbody>
       <tr>
         <td>maths</td>
-        <td><button onclick="addone()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="subone()" class="btn btn-danger">absent</button></td>
+        <td><button onclick="add1()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="sub1()" class="btn btn-danger">absent</button></td>
         <td><h1>percentage:<span id="thisone">0</span></h1></td>
-        <script type="text/javascript">
-          var foo=0;
-          var value=0;//making it global variable
-          function addone(){
-            var foo=document.getElementById('thisone').innerHTML;
-            value++;
-            document.getElementById('thisone').innerHTML=value; 
-            if(value==101){
-            subone(foo);
-          }    
-          }
-          function subone(){
-            var foo=document.getElementById('thisone').innerHTML;
-            value--;
-            document.getElementById('thisone').innerHTML=value;
-          }
-       </script>
+        
       </tr>
       <tr>
         <td>maths</td>
-        <td><button onclick="addtwo()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="subtwo()" class="btn btn-danger">absent</button></td>
+        <td><button onclick="add2()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="sub2()" class="btn btn-danger">absent</button></td>
         <td><h1>percentage:<span id="thistwo">0</span></h1></td>
-        <script type="text/javascript">
-          var foo=0;
-          var value=0;//making it global variable
-          function addtwo(){
-            var foo=document.getElementById('thistwo').innerHTML;
-            value++;
-            document.getElementById('thistwo').innerHTML=value;    
-            if(value==101){
-            subtwo(foo);
-          } 
-          }
-          function subtwo(){
-            var foo=document.getElementById('thistwo').innerHTML;
-            value--;
-            document.getElementById('thistwo').innerHTML=value;
-          }
-       </script>
+       
       </tr>
       <tr>
         <td>maths</td>
-        <td><button onclick="addthree()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="subthree()" class="btn btn-danger">absent</button></td>
+        <td><button onclick="add3()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="sub3()" class="btn btn-danger">absent</button></td>
         <td><h1>percentage:<span id="thisthree">0</span></h1></td>
-        <script type="text/javascript">
-        var foo=0;
-          var value=0;//making it global variable
-          function addthree(){
-            var foo=document.getElementById('thisthree').innerHTML;
-            value++;
-            document.getElementById('thisthree').innerHTML=value;     
-            if(value==101){
-            subthree(foo);
-          }
-          }
-          function subthree(){
-            var foo=document.getElementById('thisthree').innerHTML;
-            value--;
-            document.getElementById('thisthree').innerHTML=value;
-          }
-       </script>
+       
       </tr>
       <tr>
-        <td>maths</td>
-        <td><button onclick="addfour()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="subfour()" class="btn btn-danger">absent</button></td>
+        <td>evs</td>
+        <td><button onclick="add4()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="sub4()" class="btn btn-danger">absent</button></td>
         <td><h1>percentage:<span id="thisfour">0</span></h1></td>
-        <script type="text/javascript">
-          var foo=0;
-          var value=0;//making it global variable
-          function addfour(){
-            var foo=document.getElementById('thisfour').innerHTML;
-            value++;
-            document.getElementById('thisfour').innerHTML=value; 
-            if(value==101){
-            subfour(foo);
-          }    
-          }
-          function subfour(){
-            var foo=document.getElementById('thisfour').innerHTML;
-            value--;
-            document.getElementById('thisfour').innerHTML=value;
-          }
-       </script>
+        
       </tr>
       <tr>
         <td>maths</td>
-        <td><button onclick="addfive()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="subfive()" class="btn btn-danger">absent</button></td>
+        <td><button onclick="add5()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="sub5()" class="btn btn-danger">absent</button></td>
         <td><h1>percentage:<span id="thisfive">0</span></h1></td>
-        <script type="text/javascript">
-          var foo=0;
-          var value=0;//making it global variable
-          function addfive(){
-            var foo=document.getElementById('thisfive').innerHTML;
-            value++;
-            document.getElementById('thisfive').innerHTML=value; 
-            if(value==101){
-            subfive(foo);
-          }    
-          }
-          function subfive(){
-            var foo=document.getElementById('thisfive').innerHTML;
-            value--;
-            document.getElementById('thisfive').innerHTML=value;
-          }
-       </script>
+       
       </tr>
+      <!--
       <tr>
         <td>maths</td>
-        <td><button onclick="addsix()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="subsix()" class="btn btn-danger">absent</button></td>
+        <td><button onclick="add6()" type="button" class="btn btn-success" >present</button></td>
+        <td><button onclick="sub6()" class="btn btn-danger">absent</button></td>
         <td><h1>percentage:<span id="thissix">0</span></h1></td>
         <script type="text/javascript">
           var foo=0;
@@ -161,32 +82,91 @@
             document.getElementById('thissix').innerHTML=value;
           } 
        </script>
-      </tr>
-      <tr>
-        <td>maths</td>
-        <td><button onclick="addseven()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="subseven()" class="btn btn-danger">absent</button></td>
-        <td><h1>percentage:<span id="thisseven">0</span></h1></td>
-        <script type="text/javascript">
-          var foo=0;
-          var value=99;//making it global variable
-          function addseven(){
-            var foo=document.getElementById('thisseven').innerHTML;
-            value++;
-            document.getElementById('thisseven').innerHTML=value;
-            if(value==101){
-            subseven(foo);
-          }
-          }
-          function subseven(){
-            var foo=document.getElementById('thisseven').innerHTML;
-            value--;
-            document.getElementById('thisseven').innerHTML=value;
-            }
-       </script>
-      </tr>
+      </tr>-->
     </tbody>
   </table>
   </div>
+  <script type="text/javascript">
+    var p1=0,p2=0,p3=0,p4=0,p5=0,p6=0,p7=0,p8=0;
+    var t1=0,t2=0,t3=0,t4=0,t5=0,t6=0,t7=0,t8=0;
+
+          function add1(){
+            t1=t1+1;
+            p1=p1+1;
+            var per1=(p1*100)/t1;
+            per1=Math.round(per1);
+
+            document.getElementById('thisone').innerHTML=per1; 
+          }
+          function sub1(){
+            t1=t1+1;
+            var per1=(p1*100)/t1;
+            per1=Math.round(per1);
+            document.getElementById('thisone').innerHTML=per1;
+          }        
+          
+
+          function add2(){
+            t2=t2+1;
+            p2=p2+1;
+            var per2=(p2*100)/t2;
+            per2=Math.round(per2);
+
+            document.getElementById('thistwo').innerHTML=per2; 
+          }
+          function sub2(){
+            t2=t2+1;
+            var per2=(p2*100)/t2;
+            per2=Math.round(per2);
+            document.getElementById('thistwo').innerHTML=per2;
+          }        
+
+
+          function add3(){
+            t3=t3+1;
+            p3=p3+1;
+            var per3=(p3*100)/t3;
+            per3=Math.round(per3);
+
+            document.getElementById('thisthree').innerHTML=per3; 
+          }
+          function sub3(){
+            t3=t3+1;
+            var per3=(p3*100)/t3;
+            per3=Math.round(per3);
+            document.getElementById('thisthree').innerHTML=per3;
+          }        
+          function add4(){
+            t4=t4+1;
+            p4=p4+1;
+            var per4=(p4*100)/t4;
+            per4=Math.round(per4);
+
+            document.getElementById('thisfour').innerHTML=per4; 
+          }
+          function sub4(){
+            t4=t4+1;
+            var per4=(p4*100)/t4;
+            per4=Math.round(per4);
+            document.getElementById('thisfour').innerHTML=per4;
+          }        
+
+
+          function add5(){
+            t5=t5+1;
+            p5=p5+1;
+            var per5=(p5*100)/t5;
+            per5=Math.round(per5);
+
+            document.getElementById('thisfive').innerHTML=per5; 
+          }
+          function sub5(){
+            t5=t5+1;
+            var per5=(p5*100)/t5;
+            per5=Math.round(per5);
+            document.getElementById('thisfive').innerHTML=per5;
+          }        
+          
+       </script>
 </body>
 </html>
