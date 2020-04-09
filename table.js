@@ -1,14 +1,15 @@
 var foo=0;
 var value=0;//making it global variable
-function addseven(){
-  var foo=document.getElementById('thisseven').innerHTML;
-  while(value<100){
+function addone(){
+  var foo=document.getElementById('thisone').innerHTML;
   value++;
-  document.getElementById('thisseven').innerHTML=value;     
+  document.getElementById('thisone').innerHTML=value; 
+  if(value==101){
+  subone(foo);
+}    
 }
-}
-function subseven(){
-  var foo=document.getElementById('thisseven').innerHTML;
+function subone(){
+  var foo=document.getElementById('thisone').innerHTML;
   value--;
-  document.getElementById('thisseven').innerHTML=value;
+  document.getElementById('thisone').innerHTML=value;
 }
