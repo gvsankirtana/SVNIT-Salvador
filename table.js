@@ -1,18 +1,14 @@
 var foo=0;
-var value=((foo+1)/100)*365;//making it global variable
-function addone(){
-  var foo=document.getElementById('thisone').innerHTML;
-  var i;
-  for(i=0;value>=0;i++){
-  document.getElementById('thisone').innerHTML=value;
+var value=0;//making it global variable
+function addseven(){
+  var foo=document.getElementById('thisseven').innerHTML;
+  while(value<100){
   value++;
-  }
+  document.getElementById('thisseven').innerHTML=value;     
 }
-function subone(){
-  var foo=document.getElementById('thisone').innerHTML;
-  var i;
-  for(i=0;value>=0;i++){
-  document.getElementById('thisone').innerHTML=value;
+}
+function subseven(){
+  var foo=document.getElementById('thisseven').innerHTML;
   value--;
-  }
+  document.getElementById('thisseven').innerHTML=value;
 }
