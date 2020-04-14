@@ -25,7 +25,9 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 
+
 });
+var q;
 
 app.listen(3000,()=>console.log('express opened'));
 
@@ -56,7 +58,7 @@ app.post('/login', function(req, res){
   //be inside req.body
 
   console.log("data:", req.body);
-  let sql2 = `SELECT password,year,division from USERINFO where email='${req.body.email}'`;
+  let sql2 = `SELECT admNo,password,year,division from USERINFO where email='${req.body.email}'`;
   con.query(sql2, function (err, rows, fields) {
     if (err){
       console.log(err);
@@ -67,6 +69,7 @@ app.post('/login', function(req, res){
 
 
 var p=req.body.pwd;
+q=rows[0].admNo;
 
     //console.log(result);
     console.log("Data recieved.");
@@ -74,7 +77,8 @@ console.log("password:",rows[0].password);
 if(p==rows[0].password){
 
     console.log("Year:",rows[0].year);
-  
+    console.log("Admission Number:",rows[0].admNo);
+   
     console.log("division:",rows[0].division);
      // res.render('index',{title:'data outputed successfully',message:'Data recieved'})
 
@@ -98,7 +102,11 @@ http.createServer(function(req, res) {
 
                      res.redirect('/table.html');     
     }
+    //Object.keys(result).forEach(function(key) {
+    //  var row = result[key];
+     // console.log(row.name)
     });
+    // console.log("the solution is:",rows[0].solution)
   
 
 
@@ -114,4 +122,20 @@ http.createServer(function(req, res) {
   });
 */
   // res.send(req.body.email);
+});
+
+app.post('/1d',function(req,res){
+  console.log("data:", req.body);
+let sql4=`UPDATE attendence set em='${req.body.em}',epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
+con.query(sql4,function(err,rows,fields){
+if(err){
+        console.log(err);
+
+      };    
+      console.log("Data recieved.");
+
+});
+              res.render('index',{title:'attendence saved successfully',message:'ur attendenceis saved'})
+
+
 });
