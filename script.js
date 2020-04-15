@@ -124,7 +124,7 @@ http.createServer(function(req, res) {
   // res.send(req.body.email);
 });
 
-app.post('/1d',function(req,res){
+app.post('/save',function(req,res){
   console.log("data:", req.body);
   for(var key in req.body) {
 console.log(key);  
