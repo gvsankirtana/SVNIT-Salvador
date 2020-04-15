@@ -126,15 +126,21 @@ http.createServer(function(req, res) {
 
 app.post('/1d',function(req,res){
   console.log("data:", req.body);
-let sql4=`UPDATE attendence set em='${req.body.em}',epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
+  for(var key in req.body) {
+console.log(key);  
+let sql4=`UPDATE attendence set `+key+`='${req.body[key]}' where admNo='${q}'`;          
+//let sql4=`UPDATE attendence set em=ifnull('${req.body.em}',0), workshop=ifnull(${req.body.workshop},0),epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
+
+//let sql4=`UPDATE attendence set em='${req.body.em}',epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
 con.query(sql4,function(err,rows,fields){
 if(err){
         console.log(err);
 
-      };    
+      }
       console.log("Data recieved.");
 
 });
+         }
               res.render('index',{title:'attendence saved successfully',message:'ur attendenceis saved'})
 
 
