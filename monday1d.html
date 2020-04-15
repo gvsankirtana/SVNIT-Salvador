@@ -6,7 +6,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </div></head>
 <body>
-      <form action="/1d/" name="att" id="att" method="post">
+      <form action="/save/" name="att" id="att" method="post">
   <table class="table table-dark table-striped  table-hover ">
     <thead>
       <tr>
@@ -39,26 +39,26 @@
        
       </tr>
       <tr>
-        <td><label for="math">MATHS II</label></td>
+        <td><label for="mathsII">MATHS II</label></td>
         <td><input type="button" onclick="add4()" type="button" class="btn btn-success" value="accept"></td>
         <td><input type="button" onclick="sub4()" class="btn btn-danger" value="decline"></td>
-        <td><input type="text" name="math" value=0 id="math"></td>
+        <td><input type="text" name="mathsII" value=0 id="math"></td>
         
       </tr>
       <tr>
-        <td><label for="prac em">PRACTICAL EM</label></td>
+        <td><label for="pracem">PRACTICAL EM</label></td>
         <td><input type="button" onclick="add5()" type="button" class="btn btn-success" value="accept"></td>
         <td><input type="button" onclick="sub5()" class="btn btn-danger" value="decline"></td>
         <td><input type="text" name="pracem" value=0 id="pracem"></td>
        
       </tr>
       <tr>
-        <td><label for="prac fcp">PRACTICAL FCP</label></td>
+        <td><label for="pracfcp">PRACTICAL FCP</label></td>
         <td><input type="button" onclick="add6()" type="button" class="btn btn-success" value="accept"></td>
         <td><input type="button" onclick="sub6()" class="btn btn-danger" value="decline"></td>
         <td><input type="text" name="pracfcp" value=0 id="pracfcp"></td>  
       </tr>
-      <tr> <td colspan="4" align="center">   <input type="submit" id="submit" name="submit">  <input type="reset" name="reset" onclick="reset()">    </td>   
+      <tr> <td colspan="4" align="center">   <input type="submit" id="submit" name="submit">  <input type="reset" name="reset" onclick="return reset()">    </td>   
       </tr>
     </tbody>
   </table>
@@ -81,7 +81,8 @@ var dayName = days[date.getDay()];*/
   function reset(){
      var p1=0,p2=0,p3=0,p4=0,p5=0,p6=0,p7=0,p8=0;
     var t1=0,t2=0,t3=0,t4=0,t5=0,t6=0,t7=0,t8=0;
-    alert("hi");
+    alert("K");
+    return true;
   }       
 
          function add1(){
