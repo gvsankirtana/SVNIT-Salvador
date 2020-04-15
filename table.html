@@ -2,171 +2,125 @@
 <html lang="en">
 <head>
   <title>SVNIT Attendance</title>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()"><img src="button.png" width=50px height=50px/></span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <div class="container">
+ </head> <body>  
+  <div class="container">
      <h2>Attendance Table</h2>
      <p>Calculates your Attendance for the batch <b> D of 1st year </b> for monday:</p> 
+     <p id=time></p><p id="day"></p>
+     <iframe src="monday1d.html" height=500px id="frame" width=104%></iframe>
+     <b>Want to view the attendence of any other day?</b>
+      <ul>   <li> <a href="monday1d.html">MONDAY</a>     </li>
+    <li> <a href="tuesday1d.html">TUESDAY</a></li>
+    <li> <a href="wednesday1d.html">WEDNESDAY</a></li>
+    <li> <a href="thursday1d.html">THURSDAY</a>     </li>
+    <li> <a href="friday1d.html">FRIDAY</a>   </li>
+     </ul>  
     </div>
-</head> 
-<body>  
-  <table class="table table-dark table-striped  table-hover ">
-    <thead>
-      <tr>
-        <th>Subject</th>
-        <th>present</th>
-        <th>absent</th>
-        <th>attendance percentage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>maths</td>
-        <td><button onclick="add1()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="sub1()" class="btn btn-danger">absent</button></td>
-        <td><h1>percentage:<span id="thisone">0</span></h1></td>
-        
-      </tr>
-      <tr>
-        <td>maths</td>
-        <td><button onclick="add2()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="sub2()" class="btn btn-danger">absent</button></td>
-        <td><h1>percentage:<span id="thistwo">0</span></h1></td>
-       
-      </tr>
-      <tr>
-        <td>maths</td>
-        <td><button onclick="add3()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="sub3()" class="btn btn-danger">absent</button></td>
-        <td><h1>percentage:<span id="thisthree">0</span></h1></td>
-       
-      </tr>
-      <tr>
-        <td>evs</td>
-        <td><button onclick="add4()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="sub4()" class="btn btn-danger">absent</button></td>
-        <td><h1>percentage:<span id="thisfour">0</span></h1></td>
-        
-      </tr>
-      <tr>
-        <td>maths</td>
-        <td><button onclick="add5()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="sub5()" class="btn btn-danger">absent</button></td>
-        <td><h1>percentage:<span id="thisfive">0</span></h1></td>
-       
-      </tr>
-      <!--
-      <tr>
-        <td>maths</td>
-        <td><button onclick="add6()" type="button" class="btn btn-success" >present</button></td>
-        <td><button onclick="sub6()" class="btn btn-danger">absent</button></td>
-        <td><h1>percentage:<span id="thissix">0</span></h1></td>
-        <script type="text/javascript">
-          var foo=0;
-          var value=0;//making it global variable
-          function addsix(){
-            var foo=document.getElementById('thissix').innerHTML;
-            value++;
-            document.getElementById('thissix').innerHTML=value;    
-            if(value==101){
-            subsix(foo);
-          } 
-          }
-          function subsix(){
-            var foo=document.getElementById('thissix').innerHTML;
-            value--;
-            document.getElementById('thissix').innerHTML=value;
-          } 
-       </script>
-      </tr>-->
-    </tbody>
-  </table>
-  </div>
-  <script type="text/javascript">
-    var p1=0,p2=0,p3=0,p4=0,p5=0,p6=0,p7=0,p8=0;
-    var t1=0,t2=0,t3=0,t4=0,t5=0,t6=0,t7=0,t8=0;
+  <script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("container").style.marginLeft = "250px";
+}
 
-          function add1(){
-            t1=t1+1;
-            p1=p1+1;
-            var per1=(p1*100)/t1;
-            per1=Math.round(per1);
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("container").style.marginLeft = "0";
+}
+    var date = new Date();
+var n = date.toDateString();
+var time = date.toLocaleTimeString();
+document.getElementById('time').innerHTML = n + ' ' + time;
 
-            document.getElementById('thisone').innerHTML=per1; 
-          }
-          function sub1(){
-            t1=t1+1;
-            var per1=(p1*100)/t1;
-            per1=Math.round(per1);
-            document.getElementById('thisone').innerHTML=per1;
-          }        
-          
-
-          function add2(){
-            t2=t2+1;
-            p2=p2+1;
-            var per2=(p2*100)/t2;
-            per2=Math.round(per2);
-
-            document.getElementById('thistwo').innerHTML=per2; 
-          }
-          function sub2(){
-            t2=t2+1;
-            var per2=(p2*100)/t2;
-            per2=Math.round(per2);
-            document.getElementById('thistwo').innerHTML=per2;
-          }        
+var t=date.getDay();
 
 
-          function add3(){
-            t3=t3+1;
-            p3=p3+1;
-            var per3=(p3*100)/t3;
-            per3=Math.round(per3);
+var days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+var dayName = days[date.getDay()];
+document.getElementById('day').innerHTML = "You are viewing the attendence of today i.e " +dayName +" .Please mark your attendnce for today";
 
-            document.getElementById('thisthree').innerHTML=per3; 
-          }
-          function sub3(){
-            t3=t3+1;
-            var per3=(p3*100)/t3;
-            per3=Math.round(per3);
-            document.getElementById('thisthree').innerHTML=per3;
-          }        
-          function add4(){
-            t4=t4+1;
-            p4=p4+1;
-            var per4=(p4*100)/t4;
-            per4=Math.round(per4);
-
-            document.getElementById('thisfour').innerHTML=per4; 
-          }
-          function sub4(){
-            t4=t4+1;
-            var per4=(p4*100)/t4;
-            per4=Math.round(per4);
-            document.getElementById('thisfour').innerHTML=per4;
-          }        
+      if(t==1){
+                 document.getElementById("frame").setAttribute("src","monday1d.html");
+        }
+      else if (t==2){
+                 document.getElementById("frame").setAttribute("src","tuesday1d.html");  //change to tuesday
+      }
+      else if(t==3){         document.getElementById("frame").setAttribute("src","monday1d.html");
+      }
+      else if(t==4){document.getElementById("frame").setAttribute("src","thursday1d.html");
+      }
+      else if(t==5){document.getElementById("frame").setAttribute("src","friday1d.html");
+      }
 
 
-          function add5(){
-            t5=t5+1;
-            p5=p5+1;
-            var per5=(p5*100)/t5;
-            per5=Math.round(per5);
-
-            document.getElementById('thisfive').innerHTML=per5; 
-          }
-          function sub5(){
-            t5=t5+1;
-            var per5=(p5*100)/t5;
-            per5=Math.round(per5);
-            document.getElementById('thisfive').innerHTML=per5;
-          }        
-          
-       </script>
+//document.getElementById('time').innerHTML = dayName;
+  </script>
 </body>
 </html>
