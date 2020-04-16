@@ -9,9 +9,10 @@ const app = express();
 app.use(express.static(__dirname+'../normaljs.js'))
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json());
-app.set('view engine','pug')
-
-app.use(express.static(__dirname + '/'));
+app.set('view engine','pug');
+app.engine('html', require('ejs').renderFile);
+ app.set('view engine', 'html');
+app.use(express.static("public"));
 
 var con = mysql.createConnection({
   host: "localhost",
@@ -145,3 +146,24 @@ if(err){
 
 
 });
+app.post('/insertlist',function(req,res){
+console.log("data:", req.body);
+let sql5=`INSERT INTO todolist(list)VALUES('${req.body.list}') where admNo='${q}'`
+con.query(sql5,function(err,row,fields){
+    if (err){
+        console.log(err);
+      };
+      console.log("1 record inserted");   
+});
+res.render('index1',{title:'data saved successfully',message:'data saved'});
+});
+app.post('/deletelist',function(req,res){
+    const checkedItemId = req.body.checkbox;//id of the item checked to be deleted
+    let sql6= `DELETE FROM todolist WHERE id = checkedItemId AND admNo='${q}'`;
+    con.query(sql6,function(err,row,fields){
+        if (!err){
+            console.log("1 record deleted");   
+          };  
+    });
+    res.redirect('/insertlist');
+    });
