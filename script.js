@@ -12,7 +12,7 @@ app.use(bodyparser.json());
 app.set('view engine','pug');
 app.engine('html', require('ejs').renderFile);
  app.set('view engine', 'html');
-app.use(express.static("public"));
+app.use(express.static(__dirname+'../styles.css'));
 
 var con = mysql.createConnection({
   host: "localhost",
