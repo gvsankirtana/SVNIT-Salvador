@@ -20,6 +20,8 @@ An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVN
 
 * **Express.js**
 
+* **PUG**
+
 
 ## Authors
 
