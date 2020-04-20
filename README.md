@@ -6,23 +6,31 @@
 An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVNIT students by giving them Updates about the new Upcoming Events,to-do list,records registered Student's daily Attendance
 
 ## Technologies
-* **HTML5**
+* **HTML 5**
 
-* **CSS**
+* **CSS 3**
 
-* **Bootstrap4**
+* **Bootstrap 3 or 4**
 
 * **Javascript**
 
-* **SQL**
+* **MYSQL 2.18**
 
-* **Node.js**
+* **Node.js **
 
-* **Express.js**
+* **Express.js 4.17**
 
 * **PUG**
 
 
+## Setup
+
+To run this project,install it locally using npm
+
+```
+$ npm install
+$ npm start
+```
 ## Authors
 
 * **Sankirtana**  - [geek-2002](https://github.com/geek-2002)
