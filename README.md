@@ -36,6 +36,11 @@ To run this project,install it locally using npm
 $ npm install
 $ npm start
 ```
+
+## Sources
+This webiste is inspired by the app  „Koda Log”
+and frontend tutorial by (https://www.w3schools.com/)
+
 ## Authors
 
 * **Sankirtana**  - [geek-2002](https://github.com/geek-2002)
