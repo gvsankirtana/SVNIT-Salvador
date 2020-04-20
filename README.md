@@ -5,6 +5,21 @@
 
 An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVNIT students by giving them Updates about the new Upcoming Events,to-do list,records registered Student's daily Attendance
 
+## Technologies
+* **HTML5**
+
+* **CSS**
+
+* **Bootstrap4**
+
+* **Javascript**
+
+* **SQL**
+
+* **Node.js**
+
+* **Express.js**
+
 
 ## Authors
 
