@@ -21,7 +21,7 @@ An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVN
 
 * **MYSQL 2.18**
 
-* **Node.js **
+* **Node.js**
 
 * **Express.js 4.17**
 
