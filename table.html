@@ -76,11 +76,11 @@
      <p id=time></p><p id="day"></p>
      <iframe src="monday1d.html" height=500px id="frame" width=104%></iframe>
      <b>Want to view the attendence of any other day?</b>
-      <ul>   <li> <a href="monday1d.html">MONDAY</a>     </li>
-    <li> <a href="tuesday1d.html">TUESDAY</a></li>
-    <li> <a href="wednesday1d.html">WEDNESDAY</a></li>
-    <li> <a href="thursday1d.html">THURSDAY</a>     </li>
-    <li> <a href="friday1d.html">FRIDAY</a>   </li>
+      <ul>   <li> <a href="1st yr/1d/monday1d.html">MONDAY</a>     </li>
+    <li> <a href="1st yr/1d/tuesday1d.html">TUESDAY</a></li>
+    <li> <a href="1st yr/1d/wednesday1d.html">WEDNESDAY</a></li>
+    <li> <a href="1st yr/1d/thursday1d.html">THURSDAY</a>     </li>
+    <li> <a href="1st yr/1d/friday1d.html">FRIDAY</a>   </li>
      </ul>  
     </div>
   <script>
@@ -107,16 +107,16 @@ var dayName = days[date.getDay()];
 document.getElementById('day').innerHTML = "You are viewing the attendence of today i.e " +dayName +" .Please mark your attendnce for today";
 
       if(t==1){
-                 document.getElementById("frame").setAttribute("src","monday1d.html");
+                 document.getElementById("frame").setAttribute("src","1st yr/1d/monday1d.html");
         }
       else if (t==2){
-                 document.getElementById("frame").setAttribute("src","tuesday1d.html");  //change to tuesday
+                 document.getElementById("frame").setAttribute("src","1st yr/1d/tuesday1d.html");  //change to tuesday
       }
-      else if(t==3){         document.getElementById("frame").setAttribute("src","monday1d.html");
+      else if(t==3){         document.getElementById("frame").setAttribute("src","1st yr/1d/wednesday1d.html");
       }
-      else if(t==4){document.getElementById("frame").setAttribute("src","thursday1d.html");
+      else if(t==4){document.getElementById("frame").setAttribute("src","1st yr/1d/thursday1d.html");
       }
-      else if(t==5){document.getElementById("frame").setAttribute("src","friday1d.html");
+      else if(t==5){document.getElementById("frame").setAttribute("src","1st yr/1d/friday1d.html");
       }
 
 
