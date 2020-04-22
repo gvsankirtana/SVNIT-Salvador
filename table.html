@@ -4,8 +4,8 @@
   <title>SVNIT Attendance</title>
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
+  <a href="updates.html">SVNIT Updates</a>
+  <a href="todolist.html">Your TO-DO List</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
@@ -16,7 +16,11 @@
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>.sidenav {
+<style>
+  #bd{
+      color: white;
+  }
+  .sidenav {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -69,10 +73,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
- </head> <body>  
+ </head> <body id="bd" background="bg.jpg">  
   <div class="container">
      <h2>Attendance Table</h2>
-     <p>Calculates your Attendance for the batch <b> D of 1st year </b> for monday:</p> 
+     <p>Calculates your Attendance for the batch <b> D of 1st year </b></p> 
      <p id=time></p><p id="day"></p>
      <iframe src="monday1d.html" height=500px id="frame" width=104%></iframe>
      <b>Want to view the attendence of any other day?</b>
@@ -107,16 +111,20 @@ var dayName = days[date.getDay()];
 document.getElementById('day').innerHTML = "You are viewing the attendence of today i.e " +dayName +" .Please mark your attendnce for today";
 
       if(t==1){
-                 document.getElementById("frame").setAttribute("src","1st yr/1d/monday1d.html");
+         document.getElementById("frame").setAttribute("src","1st yr/1d/monday1d.html");
         }
       else if (t==2){
-                 document.getElementById("frame").setAttribute("src","1st yr/1d/tuesday1d.html");  //change to tuesday
+         document.getElementById("frame").setAttribute("src","1st yr/1d/tuesday1d.html");  //change to tuesday
       }
-      else if(t==3){         document.getElementById("frame").setAttribute("src","1st yr/1d/wednesday1d.html");
+      else if(t==3){         
+        document.getElementById("frame").setAttribute("src","1st yr/1d/wednesday1d.html");
       }
-      else if(t==4){document.getElementById("frame").setAttribute("src","1st yr/1d/thursday1d.html");
+
+      else if(t==4){
+        document.getElementById("frame").setAttribute("src","1st yr/1d/thursday1d.html");
       }
-      else if(t==5){document.getElementById("frame").setAttribute("src","1st yr/1d/friday1d.html");
+      else if(t==5){
+        document.getElementById("frame").setAttribute("src","1st yr/1d/friday1d.html");
       }
 
 
