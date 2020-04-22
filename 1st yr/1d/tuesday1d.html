@@ -19,6 +19,7 @@
         <td><input type="button" onclick="add1()" type="button" class="btn btn-success" value="accept" ></td>
         <td><input type="button" onclick="sub1()" class="btn btn-danger" value="decline"></td>
         <td><input type="text" name="fcp" value=0 id="fcp"/></td>
+        <td><input type="text" name="fcpt" value=0 id="fcpt"/></td>
         
       </tr>
       <tr>
@@ -26,13 +27,16 @@
         <td><input type="button" onclick="add2()" type="button" class="btn btn-success" value="accept"></td>
         <td><input type="button" onclick="sub2()" class="btn btn-danger" value="decline"></td>
         <td><input type="text" name="epc"  value=0 id="epc"></td>
+        <td><input type="text" name="epct"  value=0 id="epct"></td>
        
       </tr>
       <tr>
-        <td><label for="math">MATHS II</label></td>
+        <td><label for="mathsII">MATHS II</label></td>
         <td><input type="button" onclick="add3()" type="button" class="btn btn-success" value="accept"></td>
         <td><input type="button" onclick="sub3()" class="btn btn-danger" value="decline"></td>
-        <td><input type="text" name="math" value=0 id="math"></td>
+        <td><input type="text" name="mathsII" value=0 id="mathsII"></td>
+        <td><input type="text" name="mathsIIt" value=0 id="matsIIt"></td>
+
        
       </tr>
       <tr>
@@ -40,6 +44,8 @@
         <td><input type="button" onclick="add4()" type="button" class="btn btn-success" value="accept"></td>
         <td><input type="button" onclick="sub4()" class="btn btn-danger" value="decline"></td>
         <td><input type="text" name="brsp" value=0 id="brsp"></td>
+        <td><input type="text" name="brspIIt" value=0 id="brspIIt"></td>
+
         
       </tr>
       <tr>
@@ -47,6 +53,8 @@
         <td><input type="button" onclick="add5()" type="button" class="btn btn-success" value="accept"></td>
         <td><input type="button" onclick="sub5()" class="btn btn-danger" value="decline"></td>
         <td><input type="text" name="pmn" value=0 id="pmn"></td>
+        <td><input type="text" name="pmnt" value=0 id="pmnt"></td>
+
        
       </tr>
      <!-- <tr>
@@ -70,13 +78,13 @@
     var p1=0,p2=0,p3=0,p4=0,p5=0,p6=0,p7=0,p8=0;
     var t1=0,t2=0,t3=0,t4=0,t5=0,t6=0,t7=0,t8=0;
          
-
-         function add1(){
+ function add1(){
           p1++;t1++;
     var c1 = parseInt(document.getElementsByTagName("input")[2].value);
     c1=(p1*100)/t1;
         c1=Math.round(c1);
     document.getElementsByTagName("input")[2].value = c1;        
+    document.getElementsByTagName("input")[3].value = t1;        
           
           }
           function sub1(){
@@ -85,92 +93,111 @@
     c1=(p1*100)/t1;
     c1=Math.round(c1);
     document.getElementsByTagName("input")[2].value = c1;
+        document.getElementsByTagName("input")[3].value = t1;        
+
     
           }        
 
           function add2(){
             p2++;t2++;
-    var c2 = parseInt(document.getElementsByTagName("input")[5].value);
+    var c2 = parseInt(document.getElementsByTagName("input")[6].value);
     c2=(p2*100)/t2;
         c2=Math.round(c2);
 
-    document.getElementsByTagName("input")[5].value = c2;
+    document.getElementsByTagName("input")[6].value = c2;
+        document.getElementsByTagName("input")[7].value = t2;        
+
           }
           function sub2(){
             t2++;
-    var c2 = parseInt(document.getElementsByTagName("input")[5].value);
+    var c2 = parseInt(document.getElementsByTagName("input")[6].value);
     c2=(p2*100)/t2;
     c2=Math.round(c2);
-    document.getElementsByTagName("input")[5].value = c2;
-          }        
+
+    document.getElementsByTagName("input")[6].value = c2;
+        document.getElementsByTagName("input")[7].value = t2;  
+         }        
 
 
           function add3(){
              p3++;t3++;
-    var c3 = parseInt(document.getElementsByTagName("input")[8].value);
+    var c3 = parseInt(document.getElementsByTagName("input")[10].value);
     c3=(p3*100)/t3;
         c3=Math.round(c3);
 
-    document.getElementsByTagName("input")[8].value = c3;
+    document.getElementsByTagName("input")[10].value = c3;
+    document.getElementsByTagName("input")[11].value = t3;
           }
           function sub3(){
            t3++;
-    var c3 = parseInt(document.getElementsByTagName("input")[8].value);
+    var c3 = parseInt(document.getElementsByTagName("input")[10].value);
     c3=(p3*100)/t3;
     c3=Math.round(c3);
-    document.getElementsByTagName("input")[8].value = c3;
-    
+
+    document.getElementsByTagName("input")[10].value = c3;
+    document.getElementsByTagName("input")[11].value = t3;    
           }        
           function add4(){
             p4++;t4++;
-    var c4 = parseInt(document.getElementsByTagName("input")[11].value);
+    var c4 = parseInt(document.getElementsByTagName("input")[14].value);
     c4=(p4*100)/t4;
         c4=Math.round(c4);
 
-    document.getElementsByTagName("input")[11].value = c4;
+    document.getElementsByTagName("input")[14].value = c4;
+    document.getElementsByTagName("input")[15].value = t4;
+
           }
           function sub4(){
             t4++;
-    var c4 = parseInt(document.getElementsByTagName("input")[11].value);
+    var c4 = parseInt(document.getElementsByTagName("input")[14].value);
     c4=(p4*100)/t4;
     c4=Math.round(c4);
-    document.getElementsByTagName("input")[11].value = c4;
+
+    document.getElementsByTagName("input")[14].value = c4;
+    document.getElementsByTagName("input")[15].value = t4;
     
           }        
 
 
           function add5(){
              p5++;t5++;
-    var c5 = parseInt(document.getElementsByTagName("input")[14].value);
+    var c5 = parseInt(document.getElementsByTagName("input")[18].value);
     c5=(p5*100)/t5;
         c5=Math.round(c5);
 
-    document.getElementsByTagName("input")[14].value = c5;
+    document.getElementsByTagName("input")[18].value = c5;
+        document.getElementsByTagName("input")[19].value = t5;
+
           }
           function sub5(){
             t5++;
-    var c5 = parseInt(document.getElementsByTagName("input")[14].value);
+    var c5 = parseInt(document.getElementsByTagName("input")[18].value);
     c5=(p5*100)/t5;
     c5=Math.round(c5);
-    document.getElementsByTagName("input")[14].value = c5;
-    
+
+    document.getElementsByTagName("input")[18].value = c5;
+        document.getElementsByTagName("input")[19].value = t5;    
           }        
           
 
           function add6(){
              p6++;t6++;
-    var c6 = parseInt(document.getElementsByTagName("input")[17].value);
+    var c6 = parseInt(document.getElementsByTagName("input")[22].value);
     c6=(p6*100)/t6;
         c6=Math.round(c6);
 
-    document.getElementsByTagName("input")[17].value = c6;
-          }
+    document.getElementsByTagName("input")[22].value = c6;
+        document.getElementsByTagName("input")[23].value = t6;
+         }
           function sub6(){
             t6++;
-    var c6 = parseInt(document.getElementsByTagName("input")[17].value);
+    var c6 = parseInt(document.getElementsByTagName("input")[22].value);
     c6=(p6*100)/t6;
     c6=Math.round(c6);
-    document.getElementsByTagName("input")[17].value = c6;
+    document.getElementsByTagName("input")[22].value = c6;
+    document.getElementsByTagName("input")[23].value = t6;
+
+  
     
           }         
           
