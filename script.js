@@ -4,15 +4,18 @@ const mysql = require('mysql');
 const path = require('path');
 const pug = require('pug');
 var http = require("http");
+   // response, // You want your response code.
+    //callback;
+var _ = require('underscore');
+
 
 const app = express();
 app.use(express.static(__dirname+'../normaljs.js'))
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json());
-app.set('view engine','pug');
-app.engine('html', require('ejs').renderFile);
- app.set('view engine', 'html');
-app.use(express.static(__dirname+'../styles.css'));
+app.set('view engine','pug')
+
+app.use(express.static(__dirname + '/'));
 
 var con = mysql.createConnection({
   host: "localhost",
@@ -34,7 +37,16 @@ app.listen(3000,()=>console.log('express opened'));
 
 app.get('/', function (req,res) {
    res.sendFile(path.join(__dirname + '/login.html'));
-}); 
+});
+/*callback = function (res) {
+  response = res;
+  console.log(response); // Here `response` will return an object.
+}
+
+console.log(response); // But here, even if code is written after `http.get`, `response ` will return `undefined` because response is used before the callback (same as callback of `addEventListener`) was called.
+*/
+
+
 
 
 app.post('/signup', function(req, res){
@@ -127,12 +139,41 @@ http.createServer(function(req, res) {
 
 app.post('/save',function(req,res){
   console.log("data:", req.body);
+  let t=1;
+
   for(var key in req.body) {
 console.log(key);  
-let sql4=`UPDATE attendence set `+key+`='${req.body[key]}' where admNo='${q}'`;          
+let sql6=`SELECT * from attendence where admNo='${q}'`;
+
+
+  
+
+let sql4=`UPDATE attendence set `+key+`='${req.body[key]}' where admNo='${q}'`; 
+let sql5=`UPDATE tot_class1 set ` +key+`='${req.body[key]}' where admNo='${q}'`;         
 //let sql4=`UPDATE attendence set em=ifnull('${req.body.em}',0), workshop=ifnull(${req.body.workshop},0),epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
 
 //let sql4=`UPDATE attendence set em='${req.body.em}',epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
+
+con.query(sql6,function(err,rows,fields){
+if(err){
+        console.log(err);
+
+      }
+  //  let value = req.body[key];
+//value=rows[0](1);
+let contents = [];
+  rows.forEach(function(elem) {
+    contents.push(_.toArray(elem));
+  });
+  let Value = contents[0][t]; //3rd column of 4th row.
+
+t++;
+
+      console.log("Data:",Value);
+      
+
+});
+/*
 con.query(sql4,function(err,rows,fields){
 if(err){
         console.log(err);
@@ -141,29 +182,18 @@ if(err){
       console.log("Data recieved.");
 
 });
-         }
+
+
+con.query(sql5,function(err,rows,fields){
+if(err){
+        console.log(err);
+
+      }
+      console.log("Data recieved.");
+
+});*/        
+ }
               res.render('index',{title:'attendence saved successfully',message:'ur attendenceis saved'})
 
 
 });
-app.post('/insertlist',function(req,res){
-console.log("data:", req.body);
-let sql5=`INSERT INTO todolist(list)VALUES('${req.body.list}') where admNo='${q}'`
-con.query(sql5,function(err,row,fields){
-    if (err){
-        console.log(err);
-      };
-      console.log("1 record inserted");   
-});
-res.render('index1',{title:'data saved successfully',message:'data saved'});
-});
-app.post('/deletelist',function(req,res){
-    const checkedItemId = req.body.checkbox;//id of the item checked to be deleted
-    let sql6= `DELETE FROM todolist WHERE id = checkedItemId AND admNo='${q}'`;
-    con.query(sql6,function(err,row,fields){
-        if (!err){
-            console.log("1 record deleted");   
-          };  
-    });
-    res.redirect('/insertlist');
-    });
