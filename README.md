@@ -65,6 +65,7 @@ $ npm install mysql
 $ npm install pug
 $ npm install body-parser
 $ npm install nodemon
+$ npm install mssql
 ```
 
 To execute the node.js code
