@@ -41,8 +41,6 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 
 To run this project,install it locally using npm
 
-[![NPM](https://nodei.co/npm/<package>.png?mini=true)](https://npmjs.org/package/<package>)
-
 ```
 $ npm install
 $ npm start
@@ -66,6 +64,7 @@ $ npm install nodemon
 ```
 
 To execute the node.js code
+
 [![npm version](https://badge.fury.io/js/nodemon.svg)](https://badge.fury.io/js/nodemon)
 
 ```
