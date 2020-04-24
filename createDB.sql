@@ -10,3 +10,9 @@ CREATE TABLE userinfo(
     PRIMARY KEY (email),
     UNIQUE (admNo)
 );
+CREATE TABLE todolist(
+    list varchar(500) NOT NULL,
+    admNo varchar(255),
+    PRIMARY KEY(list),
+    UNIQUE(admNo)
+);
