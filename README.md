@@ -42,7 +42,7 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 To run this project,install it locally using npm
 
 ```
-npm install
+$ npm install
 $ npm start
 $ npm init
 ```
@@ -65,7 +65,7 @@ $ nodemon script.js
 You can also clone or download the source
 
 ```
-$https://github.com/geek-2002/SVNIT-Salvador.git
+https://github.com/geek-2002/SVNIT-Salvador.git
 
 ```
 ## Sources 📖 
