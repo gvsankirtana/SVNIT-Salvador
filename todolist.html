@@ -1,28 +1,117 @@
 <!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>list</title>
+        <link rel="stylesheet" href="todolist.css">
+    </head>
+    <body>
+        <div id="myDIV" class="header">
+        <div class="box" id="heading">
+     <h1>MY TO-DO-LIST</h1>
+     </div>
+     <div class="box">
+     <form class="item" action="/todo/" method="POST">
+        <input type="text" name="newItem" id="myInput" placeholder="Enter items" autocomplete="off">
+        <button onclick="newElement()" type="submit" name="button">+</button>
+    </form>
+    </div>
+    </div>
+    <ul id="myUL">
+        <li>Hit the gym</li>
+        <li class="checked">Pay bills</li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+      </ul>      
+    <script>
+       var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+    </script>
+    </body>
+</html>
+
+ <!--<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="todolist.css">
 </head>
 <body>
+<h2 style="margin:5px">My To Do List</h2>
 <div id="myDIV" class="header">
-        <form action="/todo/" name="att" id="att" method="post">
-
-  <h2 style="margin:5px">My To Do List</h2>
-  <textarea  rows=10 cols=10 id="cont" name="cont" placeholder="Enter your activites to be done here. Conent can be seen once you log in again"style="width:100%; font-family:monospace;"></textarea>
+    <div class="box" id="heading"></div>
+    <div class="box">
+        <form class="item" action="/todo/" name="att" id="att" method="post">
+  <textarea  autocomplete="off"  id="cont" name="cont" placeholder="Enter your activites to be done here. Conent can be seen once you log in again"style="width:100%; font-family:monospace;"></textarea>
 </div>
-<!--<ul id="myUL">
+</div>
+ <ul id="myUL">
  <li>morning exercise</li>
   <li>have breakfast</li>
   <li>go to college</li>
   <li>complete assignments</li>
   <li>read a book</li>
   <li>sleep</li>
-</ul>-->
-  <input type="submit" id="submit" name="submit"> 
+</ul>
+<button type="submit" name="button">+</button>
 
 </form>
+</div>
 <script>
-	/*
 	var myNodelist = document.getElementsByTagName("LI");
     var c1 = document.getElementsByTagName("input")[2].value;
 
@@ -73,7 +162,7 @@ function newElement() {
       div.style.display = "none";
     }
   }
-} /*
+} 
 </script>
 </body>
-</html>
+</html>-->
