@@ -44,6 +44,23 @@ To run this project,install it locally using npm
 ```
 $ npm install
 $ npm start
+$ npm init
+```
+
+To download the packages
+
+```
+$ npm init
+$ npm install express
+$ npm install mysql
+$ npm install pug
+$ npm install body-parser
+```
+
+To execute the node.js code
+
+```
+$ nodemon script.js
 ```
 
 ## Sources 📖 
