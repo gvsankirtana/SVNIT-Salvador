@@ -197,3 +197,29 @@ if(err){
 
 
 });
+app.get('/insertlist', function (req,res) {
+  res.sendFile(path.join(__dirname + '/index1.html'));
+}); 
+app.post('/insertlist',function(req,res){
+  let sql7=`SELECT todolist.admNo, todolist.list, userinfo.admNo
+  FROM todolist
+  INNER JOIN todolist ON todolist.admNo=userinfo.admNo
+  INSERT INTO todolist(list)VALUES('${req.body.list}') where admNo='${q}'`
+  con.query(sql7, function (err, rows, fields) {
+    if (err){
+      console.log(err);
+    };
+    console.log("1 record inserted");
+  });
+  res.render('index1',{title:'data saved successfully',message:'data saved'});
+});
+app.post('/deletelist',function(req,res){
+  const checkedItemId = req.body.checkbox;//id of the item checked to be deleted
+  let sql8= `DELETE FROM todolist WHERE id = checkedItemId AND admNo='${q}'`;
+  con.query(sql8,function(err,row,fields){
+      if (!err){
+          console.log("1 record deleted");   
+        };  
+  });
+  res.redirect('/insertlist');
+  });
