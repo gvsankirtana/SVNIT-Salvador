@@ -41,6 +41,8 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 
 To run this project,install it locally using npm
 
+[![NPM](https://nodei.co/npm/<package>.png?mini=true)](https://npmjs.org/package/<package>)
+
 ```
 $ npm install
 $ npm start
@@ -49,15 +51,22 @@ $ npm init
 
 To download the packages
 
+[![npm version](https://badge.fury.io/js/express.svg)](https://badge.fury.io/js/express)
+[![npm version](https://badge.fury.io/js/mysql.svg)](https://badge.fury.io/js/mysql)
+[![npm version](https://badge.fury.io/js/body-parser.svg)](https://badge.fury.io/js/body-parser)
+[![npm version](https://badge.fury.io/js/pug.svg)](https://badge.fury.io/js/pug)
+
 ```
 $ npm init
 $ npm install express
 $ npm install mysql
 $ npm install pug
 $ npm install body-parser
+$ npm install nodemon
 ```
 
 To execute the node.js code
+[![npm version](https://badge.fury.io/js/nodemon.svg)](https://badge.fury.io/js/nodemon)
 
 ```
 $ nodemon script.js
