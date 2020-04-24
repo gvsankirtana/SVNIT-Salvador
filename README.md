@@ -5,10 +5,10 @@
 
 An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVNIT students by giving them Updates about the 
 
-1.Registered Student's daily Attendance
-2.New Upcoming Events
-3.To-do list
-4.Calender events
+* Registered Student's daily Attendance
+* New Upcoming Events
+* To-do list
+* Calender events
 
 ## Table of contents
 * [Technologies](#technologies)
