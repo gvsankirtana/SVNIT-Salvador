@@ -14,9 +14,6 @@ app.use(express.static(__dirname+'../normaljs.js'))
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json());
 app.set('view engine','pug')
-app.engine('html', require('ejs').renderFile);
- app.set('view engine', 'html');
-app.use(express.static(__dirname+'../styles.css'));
 
 app.use(express.static(__dirname + '/'));
 
@@ -26,6 +23,7 @@ var con = mysql.createConnection({
   password: "pass",
   database: "amoc"
 });
+
 
 
 con.connect(function(err) {
@@ -39,6 +37,17 @@ var q;
 app.listen(3000,()=>console.log('express opened'));
 
 app.get('/', function (req,res) {
+  fetchData(res);
+   res.sendFile(path.join(__dirname + '/login.html'));
+});
+
+app.get('/todolist.html', function (req,res) {
+  fetchData(res);
+   res.sendFile(path.join(__dirname + '/login.html'));
+});
+
+app.get('/todo', function (req,res) {
+  fetchData(res);
    res.sendFile(path.join(__dirname + '/login.html'));
 });
 /*callback = function (res) {
@@ -141,6 +150,7 @@ http.createServer(function(req, res) {
 });
 
 app.post('/save',function(req,res){
+  console.log("opoiuhygtfrds");
   console.log("data:", req.body);
   let t=1;
 
@@ -200,29 +210,49 @@ if(err){
 
 
 });
-app.get('/insertlist', function (req,res) {
-  res.sendFile(path.join(__dirname + '/index1.html'));
-}); 
-app.post('/insertlist',function(req,res){
-  let sql7=`SELECT todolist.admNo, todolist.list, userinfo.admNo
-  FROM todolist
-  INNER JOIN todolist ON todolist.admNo=userinfo.admNo
-  INSERT INTO todolist(list)VALUES('${req.body.list}') where admNo='${q}'`
-  con.query(sql7, function (err, rows, fields) {
+
+
+
+
+
+
+
+
+
+
+//app.get('/todo', function (req,res) {
+  //res.sendFile(path.join(__dirname + '/index1.html'));
+//}); 
+app.post('/todo',function(req,res){
+  let sqltd=`UPDATE todo set content='${req.body.cont}' where admNo='${q}'`;
+  con.query(sqltd, function (err, rows, fields) {
     if (err){
       console.log(err);
     };
-    console.log("1 record inserted");
+    console.log("todo list updated");
   });
-  res.render('index1',{title:'data saved successfully',message:'data saved'});
+  res.render('index',{title:'data saved successfully',message:'data saved'});
 });
-app.post('/deletelist',function(req,res){
-  const checkedItemId = req.body.checkbox;//id of the item checked to be deleted
-  let sql8= `DELETE FROM todolist WHERE id = checkedItemId AND admNo='${q}'`;
-  con.query(sql8,function(err,row,fields){
-      if (!err){
-          console.log("1 record deleted");   
-        };  
+
+
+
+function executeQuery(sql,cb){
+  con.query(sql,function(error,result,fields){
+    if (error) {throw error;}
+    cb(result);
+  })
+}
+
+
+function fetchData(res){
+
+  executeQuery("Select content from todo where admNo='${q}'",function(result){
+    console.log(result);
+    res.write('<textarrea>');
+    for(var column in result[0]){
+    res.write(column);
+  }
+   res.end('</textarrea>');
+
   });
-  res.redirect('/insertlist');
-  });
+}
