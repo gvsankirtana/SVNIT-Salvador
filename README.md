@@ -62,7 +62,12 @@ To execute the node.js code
 ```
 $ nodemon script.js
 ```
+You can also clone or download the source
 
+```
+$https://github.com/geek-2002/SVNIT-Salvador.git
+
+```
 ## Sources 📖 
 This webiste is inspired by the app  „Koda Log”
 and frontend tutorial by (https://www.w3schools.com/)
