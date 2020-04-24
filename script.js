@@ -14,6 +14,9 @@ app.use(express.static(__dirname+'../normaljs.js'))
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json());
 app.set('view engine','pug')
+app.engine('html', require('ejs').renderFile);
+ app.set('view engine', 'html');
+app.use(express.static(__dirname+'../styles.css'));
 
 app.use(express.static(__dirname + '/'));
 
