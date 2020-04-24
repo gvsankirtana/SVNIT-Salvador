@@ -3,7 +3,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
-An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVNIT students by giving them Updates about the new Upcoming Events,to-do list,records registered Student's daily Attendance
+An Exemplary Website created by team Trojan Hex to Solve basic issues of all SVNIT students by giving them Updates about the 
+
+1.Registered Student's daily Attendance
+2.New Upcoming Events
+3.To-do list
+4.Calender events
 
 ## Table of contents
 * [Technologies](#technologies)
