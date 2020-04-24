@@ -52,8 +52,6 @@ and frontend tutorial by (https://www.w3schools.com/)
 
 * **Krithikha**   - [krithikha2001](https://github.com/krithikha2001)
 
-* **Mathitha**   - [mahitha2001](https://github.com/mahitha2001)
-
 
 ## License
 
