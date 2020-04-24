@@ -8,7 +8,7 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 *  📈 Registered Student's daily Attendance 📉  
 * 📺  New Upcoming Events  📺 
 *  📃 To-do list 📃 
-* Calender events
+* 📅 Calender events 📅
 
 ## Table of contents 📝 
 * [Technologies](#technologies)
@@ -16,7 +16,7 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 * [Sources](#sources)
 * [Authors](#authors)
 
-## Technologies
+## Technologies✔️
 ⌨️**FRONTEND**🖱
 * **HTML 5**
 
