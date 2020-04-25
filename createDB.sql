@@ -10,9 +10,13 @@ CREATE TABLE userinfo(
     PRIMARY KEY (email),
     UNIQUE (admNo)
 );
-CREATE TABLE todolist(
+CREATE TABLE todo(
     content varchar(500) NOT NULL,
     admNo varchar(255),
     PRIMARY KEY(content),
     UNIQUE(admNo)
+);
+CREATE TABLE submit6(
+SELECT admNo FROM userinfo
+WHERE admNo like 'u19%'
 );
