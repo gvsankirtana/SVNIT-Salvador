@@ -73,7 +73,7 @@ To execute the node.js code
 [![npm version](https://badge.fury.io/js/nodemon.svg)](https://badge.fury.io/js/nodemon)
 
 ```
-$ nodemon script.js
+$ node script.js
 ```
 You can also clone or download the source
 
