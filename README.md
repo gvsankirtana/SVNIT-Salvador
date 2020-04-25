@@ -83,26 +83,11 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 ```
 
 ## Backend Database
-```
-mysql> select * from userinfo
-```
 
 ![table description](https://i.postimg.cc/Bv8Ccmn1/Capture-2.jpg)
 
-| email                  | name           | admNo    | year  | division | password  |
-| -----------------------| ---------------|----------|-------|----------|-----------|
-| kumar@gmail.com        | Kumar          |U17cs067  | 3     | a        | hgvu      |
-| mary@gmail.com         | Mary           |U19cs086  | 1     | d        | jhj       |
-| krithikhabala@gmail.com| Krithikha Bala |U19cs076  | 1     | d        | krithi24  |
-| mahitha@gmail.com      | Mahitha        |U19cs066  | 1     | d        | kkugy     |
-| kiran@gmail.com        | Kiran          |U18me034  | 2     | a        | jugi7     |
-| mario@gmail.com        | Mario          |U18ch003  | 2     | j        | nhukp     |
-| sunil@gmail.com        | Sunil          |U17me078  | 3     | a        | kblll     |
-| mohan@gmail.com        | Mohan          |U19cs065  | 1     | d        | jugi      |
 
-```
-8 rows in set(0.01 sec)
-```
+
 TO-DO-List Database
 ```
 mysql> select * from todo
