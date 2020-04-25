@@ -37,7 +37,6 @@ var q;
 app.listen(3000,()=>console.log('express opened'));
 
 app.get('/', function (req,res) {
-  fetchData(res);
    res.sendFile(path.join(__dirname + '/login.html'));
 });
 
@@ -45,10 +44,15 @@ app.get('/todolist.html', function (req,res) {
   fetchData(res);
    res.sendFile(path.join(__dirname + '/login.html'));
 });
-
 app.get('/todo', function (req,res) {
   fetchData(res);
-   res.sendFile(path.join(__dirname + '/login.html'));
+  res.send({ hello: 'world' });
+  res.send([body]);
+});
+app.get('/api/todo', function (req,res) {
+  fetchData(res);
+  res.send({ hello: 'world' });
+  res.send([body]);
 });
 /*callback = function (res) {
   response = res;
@@ -105,6 +109,7 @@ if(p==rows[0].password){
     console.log("Admission Number:",rows[0].admNo);
    
     console.log("division:",rows[0].division);
+
      // res.render('index',{title:'data outputed successfully',message:'Data recieved'})
 
 }
@@ -125,7 +130,10 @@ http.createServer(function(req, res) {
 }).listen(8888);
                       */
 
-                     res.redirect('/table.html');     
+                     res.redirect('/table1.html');     
+    }
+    else if(rows[0].year==2){
+      res.redirect('/table2.html');
     }
     //Object.keys(result).forEach(function(key) {
     //  var row = result[key];
@@ -186,7 +194,7 @@ t++;
       
 
 });
-/*
+
 con.query(sql4,function(err,rows,fields){
 if(err){
         console.log(err);
@@ -204,7 +212,72 @@ if(err){
       }
       console.log("Data recieved.");
 
-});*/        
+});    
+ }
+              res.render('index',{title:'attendence saved successfully',message:'ur attendenceis saved'})
+
+
+});
+
+
+
+
+
+app.post('/save2',function(req,res){
+  console.log("data:", req.body);
+  let t=1;
+
+  for(var key in req.body) {
+console.log(key);  
+let sql6=`SELECT * from attendence2 where admNo='${q}'`;
+
+
+  
+
+let sql4=`UPDATE attendence2 set `+key+`='${req.body[key]}' where admNo='${q}'`; 
+let sql5=`UPDATE tot_class2 set ` +key+`='${req.body[key]}' where admNo='${q}'`;         
+//let sql4=`UPDATE attendence set em=ifnull('${req.body.em}',0), workshop=ifnull(${req.body.workshop},0),epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
+
+//let sql4=`UPDATE attendence set em='${req.body.em}',epc='${req.body.epc}',pmn='${req.body.pmn}',mathsII='${req.body.math}',pracem='${req.body.pracem}',pracfcp='${req.body.pracfcp}' where admNo='${q}'`;
+
+con.query(sql6,function(err,rows,fields){
+if(err){
+        console.log(err);
+
+      }
+  //  let value = req.body[key];
+//value=rows[0](1);
+let contents = [];
+  rows.forEach(function(elem) {
+    contents.push(_.toArray(elem));
+  });
+  let Value = contents[0][t]; 
+
+t++;
+
+      console.log("Data:",Value);
+      
+
+});
+
+con.query(sql4,function(err,rows,fields){
+if(err){
+        console.log(err);
+
+      }
+      console.log("Data recieved.");
+
+});
+
+
+con.query(sql5,function(err,rows,fields){
+if(err){
+        console.log(err);
+
+      }
+      console.log("Data recieved.");
+
+});       
  }
               res.render('index',{title:'attendence saved successfully',message:'ur attendenceis saved'})
 
@@ -220,9 +293,19 @@ if(err){
 
 
 
-//app.get('/todo', function (req,res) {
-  //res.sendFile(path.join(__dirname + '/index1.html'));
-//}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.post('/todo',function(req,res){
   let sqltd=`UPDATE todo set content='${req.body.cont}' where admNo='${q}'`;
   con.query(sqltd, function (err, rows, fields) {
@@ -242,11 +325,15 @@ function executeQuery(sql,cb){
     cb(result);
   })
 }
+q='u19cs076';
+executeQuery(`Select content from todo where admNo='${q}'`,function(result){
+    console.log(result);
+  });
 
 
 function fetchData(res){
 
-  executeQuery("Select content from todo where admNo='${q}'",function(result){
+  executeQuery(`Select content from todo where admNo='${q}'`,function(result){
     console.log(result);
     res.write('<textarrea>');
     for(var column in result[0]){

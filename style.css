@@ -1,7 +1,17 @@
 *{
-	background-color: red;
 	font-family: Calibri;
 	
+}
+body{
+    background: url("backgr.jpg");
+
+}
+a{
+  background-color: yellow;
+}
+#m{
+  color:red;
+  
 }
 #title{
 	background-color: white;
@@ -10,10 +20,11 @@
 
 }
 #titleinfo{
-	font-size: 15;
+	font-size: 20px;
 	text-align: center;
 	font-family: Comic Sans MS;
-	color: yellow;
+	color: brown;
+
 }
 #time {
 	background-color: linear-gradient(red,green,blue,violet);
