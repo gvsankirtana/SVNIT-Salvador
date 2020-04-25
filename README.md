@@ -98,6 +98,21 @@ mysql> select*from userinfo
 | sunil@gmail.com    | Sunil       |U17me078  | 3     | a        | kblll     |
 | mohan@gmail.com    | Mohan       |U19cs065  | 1     | d        | jugi      |
 
+```
+mysql> select*from todo
+```
+
+| admNo   | content               |
+| --------| ----------------------|
+|U17cs067 | maths assignment      |
+|U19cs086 | mechanics test        |
+|U19cs076 | practical record book |
+|U19cs066 | maths test            |
+|U18me034 | have to buy notebooks |
+|U18ch003 | solids test           |
+|U17me078 | ED homework           |
+|U19cs065 | workshop record       |
+
 ## Sources 📖 
 This webiste is inspired by the app  „Koda Log”
 and frontend tutorial by (https://www.w3schools.com/)
