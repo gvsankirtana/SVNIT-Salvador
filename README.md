@@ -84,8 +84,10 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 
 ## Backend Database
 ```
-mysql> select*from userinfo
+mysql> select * from userinfo
 ```
+
+![table description](https://github.com/geek-2002/SVNIT-Salvador/tree/master/images/Capture.jpg)
 
 | email                  | name           | admNo    | year  | division | password  |
 | -----------------------| ---------------|----------|-------|----------|-----------|
@@ -103,7 +105,7 @@ mysql> select*from userinfo
 ```
 TO-DO-List Database
 ```
-mysql> select*from todo
+mysql> select * from todo
 ```
 
 | admNo   | content               |
