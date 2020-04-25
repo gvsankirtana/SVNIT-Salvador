@@ -200,7 +200,7 @@ t++;
 
       console.log("Data:",Value);
       
-
+     res.render('friday1d',{attendance:Value});
 });
         res.render('friday1d',{attendance:Value});
 
