@@ -87,7 +87,7 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 mysql> select * from userinfo
 ```
 
-![table description](https://github.com/geek-2002/SVNIT-Salvador/tree/master/images/Capture.jpg)
+![table description](https://github.com/geek-2002/SVNIT-Salvador/tree/master/images/Capture.JPG)
 
 | email                  | name           | admNo    | year  | division | password  |
 | -----------------------| ---------------|----------|-------|----------|-----------|
