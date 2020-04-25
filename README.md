@@ -143,7 +143,7 @@ mysql> desc attendence
 ```
 14 rows in set(0.01 sec)
 ```
-Second year Attendance database 
+Second year Attendance 2 database 
 ```
 mysql> desc attendence
 ```
