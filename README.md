@@ -19,6 +19,13 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 
 ## Illustration
 
+# Login page
+
+![login page](https://i.postimg.cc/Xv4txZPb/Capture2.jpg)
+
+# Attendance Page
+
+![Attendance Page]()
 
 ## Technologies✔️
 ⌨️**FRONTEND**🖱
@@ -84,53 +91,22 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 
 ## Backend Database
 
+# userinfo Database
+
 ![table description](https://i.postimg.cc/Bv8Ccmn1/Capture-2.jpg)
 
 
 
-TO-DO-List Database
-```
-mysql> select * from todo
-```
+# TO-DO-List Database
 
-| admNo   | content               |
-| --------| ----------------------|
-|U17cs067 | maths assignment      |
-|U19cs086 | mechanics test        |
-|U19cs076 | practical record book |
-|U19cs066 | maths test            |
-|U18me034 | have to buy notebooks |
-|U18ch003 | solids test           |
-|U17me078 | ED homework           |
-|U19cs065 | workshop record       |
-
-```
-8 rows in set(0.01 sec)
-```
-
-First year Attendance database 
-```
-mysql> desc attendence
-```
-|  Field          | Type        | NULL  | key  | Default | Extra  |
-| ----------------|-------------|-------|------|---------|--------|
-|  admNo          | varchar(10) | Yes   |      | NULL    |        |
-|  em             | int(3)      | Yes   |      | 0       |        |
-|  pmn            | int(3)      | Yes   |      | 0       |        |
-|  epc            | int(3)      | Yes   |      | 0       |        |
-|  fcp            | int(3)      | Yes   |      | 0       |        |
-|  mathsII        | int(3)      | Yes   |      | 0       |        |
-|  pracfcp        | int(3)      | Yes   |      | 0       |        |
-|  pracem         | int(3)      | Yes   |      | 0       |        |
-|  brsp           | int(3)      | Yes   |      | 0       |        |
-|  pracbrsp       | int(3)      | Yes   |      | 0       |        |
-|  workshop       | int(3)      | Yes   |      | 0       |        |
+![table description](https://i.postimg.cc/pdfGw0K5/Capture4-1.jpg)
 
 
-```
-14 rows in set(0.01 sec)
-```
-Second year Attendance 2 database 
+# First year Attendance database 
+
+
+
+# Second year Attendance 2 database 
 ```
 mysql> desc attendence
 ```
