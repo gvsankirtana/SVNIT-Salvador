@@ -18,7 +18,7 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 * [Authors](#authors)
 
 ## Illustration
-https://i.postimg.cc/Bv8Ccmn1/Capture-2.jpg
+
 
 ## Technologies✔️
 ⌨️**FRONTEND**🖱
@@ -87,7 +87,7 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 mysql> select * from userinfo
 ```
 
-![table description](https://github.com/geek-2002/SVNIT-Salvador/tree/master/images/Capture.JPG)
+![table description](https://i.postimg.cc/Bv8Ccmn1/Capture-2.jpg)
 
 | email                  | name           | admNo    | year  | division | password  |
 | -----------------------| ---------------|----------|-------|----------|-----------|
