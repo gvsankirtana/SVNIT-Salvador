@@ -81,6 +81,21 @@ You can also clone or download the source
 https://github.com/geek-2002/SVNIT-Salvador.git
 
 ```
+
+## Backend Database
+```
+mysql> select*from todo
+```
+
+| admNo         |content        |
+| ------------- | ------------- |
+| u17cs034      | NULL          |
+| u17cs034      | NULL          |
+| u17cs034      | NULL          |
+| u17cs034      | NULL          |
+| u17cs034      | NULL          |
+| u17cs034      | NULL          |
+| u17cs034      | NULL          |
 ## Sources 📖 
 This webiste is inspired by the app  „Koda Log”
 and frontend tutorial by (https://www.w3schools.com/)
