@@ -11,6 +11,7 @@ CREATE TABLE userinfo(
     UNIQUE (admNo)
 );
 
+
 CREATE TABLE todo(Select admNo from userinfo);
 alter table todo add content varchar(200);
 
