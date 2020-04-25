@@ -87,17 +87,21 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 mysql> select*from userinfo
 ```
 
-| email              | name        | admNo    | year  | division | password  |
-| -------------------| ------------|----------|-------|----------|-----------|
-| kumar@gmail.com    | Kumar       |U17cs067  | 3     | a        | hgvu      |
-| mary@gmail.com     | Mary        |U19cs086  | 1     | d        | jhj       |
-| krithikha@gmail.com| Krithikha   |U19cs076  | 1     | d        | khjk      |
-| mahitha@gmail.com  | Mahitha     |U19cs066  | 1     | d        | kkugy     |
-| kiran@gmail.com    | Kiran       |U18me034  | 2     | a        | jugi7     |
-| mario@gmail.com    | Mario       |U18ch003  | 2     | j        | nhukp     |
-| sunil@gmail.com    | Sunil       |U17me078  | 3     | a        | kblll     |
-| mohan@gmail.com    | Mohan       |U19cs065  | 1     | d        | jugi      |
+| email                  | name           | admNo    | year  | division | password  |
+| -----------------------| ---------------|----------|-------|----------|-----------|
+| kumar@gmail.com        | Kumar          |U17cs067  | 3     | a        | hgvu      |
+| mary@gmail.com         | Mary           |U19cs086  | 1     | d        | jhj       |
+| krithikhabala@gmail.com| Krithikha Bala |U19cs076  | 1     | d        | krithi24  |
+| mahitha@gmail.com      | Mahitha        |U19cs066  | 1     | d        | kkugy     |
+| kiran@gmail.com        | Kiran          |U18me034  | 2     | a        | jugi7     |
+| mario@gmail.com        | Mario          |U18ch003  | 2     | j        | nhukp     |
+| sunil@gmail.com        | Sunil          |U17me078  | 3     | a        | kblll     |
+| mohan@gmail.com        | Mohan          |U19cs065  | 1     | d        | jugi      |
 
+```
+8 rows in set(0.01 sec)
+```
+TO-DO-List Database
 ```
 mysql> select*from todo
 ```
@@ -112,6 +116,79 @@ mysql> select*from todo
 |U18ch003 | solids test           |
 |U17me078 | ED homework           |
 |U19cs065 | workshop record       |
+
+```
+8 rows in set(0.01 sec)
+```
+
+First year Attendance database 
+```
+mysql> desc attendence
+```
+|  Field          | Type        | NULL  | key  | Default | Extra  |
+| ----------------|-------------|-------|------|---------|--------|
+|  admNo          | varchar(10) | Yes   |      | NULL    |        |
+|  em             | int(3)      | Yes   |      | 0       |        |
+|  pmn            | int(3)      | Yes   |      | 0       |        |
+|  epc            | int(3)      | Yes   |      | 0       |        |
+|  fcp            | int(3)      | Yes   |      | 0       |        |
+|  mathsII        | int(3)      | Yes   |      | 0       |        |
+|  pracfcp        | int(3)      | Yes   |      | 0       |        |
+|  pracem         | int(3)      | Yes   |      | 0       |        |
+|  brsp           | int(3)      | Yes   |      | 0       |        |
+|  pracbrsp       | int(3)      | Yes   |      | 0       |        |
+|  workshop       | int(3)      | Yes   |      | 0       |        |
+
+
+```
+14 rows in set(0.01 sec)
+```
+Second year Attendance database 
+```
+mysql> desc attendence
+```
+|  Field          | Type        | NULL  | key  | Default | Extra  |
+| ----------------|-------------|-------|------|---------|--------|
+|  admNo          | varchar(10) | Yes   |      | NULL    |        |
+|  tcs            | int(3)      | Yes   |      | 0       |        |
+|  control_sys    | int(3)      | Yes   |      | 0       |        |
+|  dbms           | int(3)      | Yes   |      | 0       |        |
+|  maths          | int(3)      | Yes   |      | 0       |        |
+|  communication  | int(3)      | Yes   |      | 0       |        |
+|  softtools      | int(3)      | Yes   |      | 0       |        |
+|  praccontrolsys | int(3)      | Yes   |      | 0       |        |
+|  pracdbms       | int(3)      | Yes   |      | 0       |        |
+|  ec             | int(3)      | Yes   |      | 0       |        |
+|  em1            | int(3)      | Yes   |      | 0       |        |
+|  maths3         | int(3)      | Yes   |      | 0       |        |
+|  sfm            | int(3)      | Yes   |      | 0       |        |
+|  ecprac         | int(3)      | Yes   |      | 0       |        |
+
+```
+14 rows in set(0.01 sec)
+```
+
+Total class database
+```
+mysql> desc tot_class1
+```
+|  Field           | Type        | NULL  | key  | Default | Extra  |
+| -----------------|-------------|-------|------|---------|--------|
+|  admNo           | varchar(10) | Yes   |      | NULL    |        |
+|  emt             | int(3)      | Yes   |      | 0       |        |
+|  pmnt            | int(3)      | Yes   |      | 0       |        |
+|  epct            | int(3)      | Yes   |      | 0       |        |
+|  fcpt            | int(3)      | Yes   |      | 0       |        |
+|  mathsIIt        | int(3)      | Yes   |      | 0       |        |
+|  pracfcpt        | int(3)      | Yes   |      | 0       |        |
+|  pracemt         | int(3)      | Yes   |      | 0       |        |
+|  brspt           | int(3)      | Yes   |      | 0       |        |
+|  pracbrspt       | int(3)      | Yes   |      | 0       |        |
+|  workshopt       | int(3)      | Yes   |      | 0       |        |
+
+```
+11 rows in set(0.01 sec)
+```
 
 ## Sources 📖 
 This webiste is inspired by the app  „Koda Log”
