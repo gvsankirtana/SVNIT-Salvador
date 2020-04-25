@@ -16,3 +16,4 @@ CREATE TABLE todolist(
     PRIMARY KEY(list),
     UNIQUE(admNo)
 );
+
