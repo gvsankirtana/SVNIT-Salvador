@@ -18,7 +18,7 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 * [Authors](#authors)
 
 ## Illustration
-
+https://i.postimg.cc/Bv8Ccmn1/Capture-2.jpg
 
 ## Technologies✔️
 ⌨️**FRONTEND**🖱
