@@ -11,9 +11,8 @@ CREATE TABLE userinfo(
     UNIQUE (admNo)
 );
 CREATE TABLE todolist(
-    list varchar(500) NOT NULL,
+    content varchar(500) NOT NULL,
     admNo varchar(255),
-    PRIMARY KEY(list),
+    PRIMARY KEY(content),
     UNIQUE(admNo)
 );
-
