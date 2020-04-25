@@ -84,18 +84,20 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 
 ## Backend Database
 ```
-mysql> select*from todo
+mysql> select*from userinfo
 ```
 
-| admNo         |content        |
-| ------------- | ------------- |
-| u17cs034      | NULL          |
-| u17cs034      | NULL          |
-| u17cs034      | NULL          |
-| u17cs034      | NULL          |
-| u17cs034      | NULL          |
-| u17cs034      | NULL          |
-| u17cs034      | NULL          |
+| email              | name        | admNo    | year  | division | password  |
+| -------------------| ------------|----------|-------|----------|-----------|
+| kumar@gmail.com    | Kumar       |U17cs067  | 3     | a        | hgvu      |
+| mary@gmail.com     | Mary        |U19cs086  | 1     | d        | jhj       |
+| krithikha@gmail.com| Krithikha   |U19cs076  | 1     | d        | khjk      |
+| mahitha@gmail.com  | Mahitha     |U19cs066  | 1     | d        | kkugy     |
+| kiran@gmail.com    | Kiran       |U18me034  | 2     | a        | jugi7     |
+| mario@gmail.com    | Mario       |U18ch003  | 2     | j        | nhukp     |
+| sunil@gmail.com    | Sunil       |U17me078  | 3     | a        | kblll     |
+| mohan@gmail.com    | Mohan       |U19cs065  | 1     | d        | jugi      |
+
 ## Sources 📖 
 This webiste is inspired by the app  „Koda Log”
 and frontend tutorial by (https://www.w3schools.com/)
