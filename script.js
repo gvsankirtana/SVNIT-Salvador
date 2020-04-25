@@ -15,6 +15,13 @@ app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json());
 app.set('view engine','pug')
 
+app.engine('html', require('ejs').renderFile);
+ app.set('view engine', 'html');
+ app.set('friday1d', __dirname);
+ app.use(bodyParser.urlencoded({extended:true}));
+ app.use(express.static("public"));
+
+
 app.use(express.static(__dirname + '/'));
 
 var con = mysql.createConnection({
@@ -194,6 +201,7 @@ t++;
       
 
 });
+        res.render('friday1d',{attendance:Value});
 
 con.query(sql4,function(err,rows,fields){
 if(err){
