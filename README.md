@@ -20,6 +20,12 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 # Illustration
 
 ## Login page
+Enter the email and password as following to see the working
+
+```
+email : Krithikhabala@gmail.com
+password: Krithi24
+```
 
 ![login page](https://i.postimg.cc/Xv4txZPb/Capture2.jpg)
 
