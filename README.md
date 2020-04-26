@@ -110,18 +110,6 @@ You can also clone or download the source
 https://github.com/geek-2002/SVNIT-Salvador.git
 
 ```
-Run it on localhost:3000
-
-```
-http://localhost:3000/
-```
-
-Enter the email and password as following to see the working
-
-```
-email : Krithikhabala@gmail.com
-password: Krithi24
-```
 # Backend Database
 
 ## userinfo Database
