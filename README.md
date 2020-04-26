@@ -27,9 +27,14 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 
 ![attendance](https://i.postimg.cc/jqp2v2jz/Capture5-1.jpg)
 
+## Updates Page
+
+![updates](https://i.postimg.cc/J0Y2c0Jv/Capture3.jpg)
+
 ## Command Prompt
 
 ![database connected](https://i.postimg.cc/NFD2TppW/Capture7.jpg)
+
 
 
 ## Technologies✔️
@@ -110,9 +115,6 @@ https://github.com/geek-2002/SVNIT-Salvador.git
 ## Attendance database 
 
 ![database connected](https://i.postimg.cc/NM9wRMbY/IMG-20200425-WA0049.jpg)
-
-# Total attendance database 
-
 
 
 ## Sources 📖 
