@@ -85,6 +85,12 @@ $ npm install nodemon
 $ npm install mssql
 ```
 
+You can also clone or download the source
+
+```
+https://github.com/geek-2002/SVNIT-Salvador.git
+
+```
 To execute the node.js code
 
 [![npm version](https://badge.fury.io/js/nodemon.svg)](https://badge.fury.io/js/nodemon)
@@ -104,12 +110,7 @@ Enter the email and password as following to see the working
 email : Krithikhabala@gmail.com
 password: Krithi24
 ```
-You can also clone or download the source
 
-```
-https://github.com/geek-2002/SVNIT-Salvador.git
-
-```
 # Backend Database
 
 ## userinfo Database
