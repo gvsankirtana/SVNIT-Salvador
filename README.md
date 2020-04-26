@@ -23,9 +23,11 @@ An Exemplary Website  👩🏻‍💻  created by team Trojan Hex to Solve basic
 
 ![login page](https://i.postimg.cc/Xv4txZPb/Capture2.jpg)
 
+## Attendance page
+
+![attendance](https://i.postimg.cc/jqp2v2jz/Capture5-1.jpg)
 
 ## Command Prompt
-
 
 ![database connected](https://i.postimg.cc/NFD2TppW/Capture7.jpg)
 
