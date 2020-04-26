@@ -113,21 +113,29 @@ password: Krithi24
 
 # Backend Database
 
+## Database tables
+
+![table description](https://i.postimg.cc/8527ksGD/database.jpg)
+
 ## userinfo Database
 
 ![table description](https://i.postimg.cc/Bv8Ccmn1/Capture-2.jpg)
-
-
 
 ## TO-DO-List Database
 
 ![table description](https://i.postimg.cc/pdfGw0K5/Capture4-1.jpg)
 
-
 ## Attendance database 
 
 ![database connected](https://i.postimg.cc/NM9wRMbY/IMG-20200425-WA0049.jpg)
 
+![database connected](https://i.postimg.cc/BbJGCGcH/att2.jpg)
+
+## Total Attendance database 
+
+![database connected](https://i.postimg.cc/MH59Jkk7/totclass2.jpg) 
+
+![database connected](https://i.postimg.cc/prhw2XZf/titclass1-1.jpg)
 
 ## Sources 📖 
 This webiste is inspired by the app  „Koda Log”
