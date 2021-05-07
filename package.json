@@ -17,7 +17,7 @@
     "mysql": "^2.18.1",
     "pug": "^2.0.4",
     "sql": "^0.78.0",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
